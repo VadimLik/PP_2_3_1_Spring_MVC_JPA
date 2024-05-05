@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список автомобилей</title>
+</head>
+<body>
+<div>
+<table class="table table-dark table-striped">
+    <thead>
+    <tr>
+        <th scope="col">iD</th>
+        <th scope="col">Model</th>
+        <th scope="col">Series</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${carlist}"><!--/*@thymesVar id="car" type=""*/-->
+        <td th:text="${car.id}"/>
+        <td th:text="${car.model}"/>
+        <td th:text="${car.series}"/>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
